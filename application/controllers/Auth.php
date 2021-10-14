@@ -141,9 +141,9 @@ class Auth extends CI_Controller
   {
     $config = [
       'protocol'  => 'smtp',
-      'smtp_host' => 'ssl://smtp.hostinger.com',
-      'smtp_user' => 'support@hmtmeupnvy.com',
-      'smtp_pass' => '^Y7yI17V[xg',
+      'smtp_host' => getenv('SMTP_HOST'),
+      'smtp_user' => getenv('SMTP_USER'),
+      'smtp_pass' => getenv('SMTP_PASSWORD'),
       'smtp_port' => 465,
       'mailtype'  => 'html',
       'charset'   => 'utf-8',
@@ -152,7 +152,7 @@ class Auth extends CI_Controller
 
     $this->email->initialize($config);
 
-    $this->email->from('support@hmtmeupnvy.com', 'HMTME UPNYK');
+    $this->email->from(getenv('SMTP_USER'), 'HMTME UPNYK');
     $this->email->to($this->input->post('email'));
 
     if ($type == 'verify') {
