@@ -142,8 +142,8 @@ class Auth extends CI_Controller
     $config = [
       'protocol'  => 'smtp',
       'smtp_host' => 'ssl://smtp.hostinger.com',
-      'smtp_user' => 'support@hmtmeupnvy.com',
-      'smtp_pass' => '^Y7yI17V[xg',
+      'smtp_user' => getenv('SMTP_USER'),
+      'smtp_pass' => getenv('SMTP_PASSWORD'),
       'smtp_port' => 465,
       'mailtype'  => 'html',
       'charset'   => 'utf-8',

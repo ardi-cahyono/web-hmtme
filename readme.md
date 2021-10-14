@@ -21,7 +21,7 @@ Aplikasi berbasis web ini bertujuan untuk melakukan pendataan alumni. Aplikasi i
 ## Info
 Anda harus memvalidasi email saat melakukan pendafaran sebelum 1x24 jam, apabila tidak melakukan validasi maka anda tidak dapat melakukan login.
 
-## Bagaimanan Cara Berkontribusi
+## Bagaimana Cara Berkontribusi
 1. Clone repositori ini pada directory local anda
 2. Sesuaikan konfigurasi database pada file `.env.development`
 3. Import stuktur database yang tersedia
